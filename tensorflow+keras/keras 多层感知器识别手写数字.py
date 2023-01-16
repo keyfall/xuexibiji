@@ -85,7 +85,7 @@ print()
 print('accuracy=', sources)
 
 #通过test数值进行预测，得到测试结果
-prediction=model.predict(x_Test_normalize)
+prediction=model.predict(x_text_image.reshape(10000,784).astype('float32'))
 pre = np.argmax(prediction,axis=1)
 
 #展示图片和实际值与预测值
